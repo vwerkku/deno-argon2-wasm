@@ -1,0 +1,20 @@
+[package]
+name = "deno-argon2-wasm"
+repository = "https://github.com/vwerkku/deno-argon2-wasm"
+version = "0.1.0"
+edition = "2021"
+authors = ["Victor Wernér"]
+license = "MIT"
+publish = false
+
+[lib]
+name = "argon2"
+crate-type = ["cdylib"]
+
+[dependencies]
+argon2 = "0.4.1"
+
+[profile.release]
+opt-level = 3
+debug = false
+strip = "symbols"

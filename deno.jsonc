@@ -1,0 +1,26 @@
+{   
+    "compilerOptions": {
+        "strict": true
+    },
+    "fmt": {
+        "files": {
+            "include": ["mod.ts", "test.ts", "wasm/"]
+        },
+        "options": {
+            "useTabs": false,
+            "lineWidth": 80,
+            "indentWidth": 4,
+            "singleQuote": true
+        }
+    },
+    "lint": {
+        "files": {
+            "include": ["mod.ts", "test.ts", "wasm/"]
+        },
+        "rules": {
+            "tags": ["recommended"],
+            "include": [""],
+            "exclude": ["no-explicit-any"]
+        }
+    }
+}

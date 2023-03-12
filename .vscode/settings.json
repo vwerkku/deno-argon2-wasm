@@ -1,0 +1,5 @@
+{
+    "deno.enable": true,
+    "deno.unstable": true,
+    "rust-analyzer.cargo.target": "wasm32-unknown-unknown"
+}
