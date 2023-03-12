@@ -1,5 +1,10 @@
 # deno-argon2-wasm
 
+[![releases](https://img.shields.io/github/release/vwerkku/deno-argon2-wasm)](https://github.com/vwerkku/deno-argon2-wasm/releases)
+[![build](https://github.com/vwerkku/deno-argon2-wasm/actions/workflows/build.yml/badge.svg)](https://github.com/vwerkku/deno-argon2-wasm/actions/workflows/build.yml)
+[![license](https://img.shields.io/github/license/vwerkku/deno-argon2-wasm)](https://github.com/vwerkku/deno-argon2-wasm/blob/master/LICENSE)
+
+
 This library provides support for the Argon2 password hashing algorithm in Deno. The binding are written in Rust and compiled to WebAssembly.
 
 ## Usage
