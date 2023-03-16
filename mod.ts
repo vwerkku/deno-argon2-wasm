@@ -100,7 +100,7 @@ function readFromWasm(pointer: number, length: number): Uint8Array {
 /**
  * Default parameters to use for Argon2 hashing.
  */
-function defaultParams(): Params {
+export function defaultParams(): Params {
     return {
         algorithm: algorithm.argon2id,
         memoryCost: 12,
