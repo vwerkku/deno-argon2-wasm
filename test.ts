@@ -1,5 +1,5 @@
-import { assert } from 'https://deno.land/std@0.178.0/testing/asserts.ts';
-import { algorithm, defaultParams, hash, verify, version } from './mod.ts';
+import { assert } from "std/testing/asserts.ts";
+import { algorithm, defaultParams, hash, verify, version } from "./mod.ts";
 
 const baseParameters = defaultParams();
 

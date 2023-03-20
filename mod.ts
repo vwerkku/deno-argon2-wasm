@@ -1,8 +1,5 @@
-import * as base64 from 'https://deno.land/std@0.178.0/encoding/base64.ts';
-import {
-    crypto,
-    toHashString,
-} from 'https://deno.land/std@0.178.0/crypto/mod.ts';
+import * as base64 from "std/encoding/base64.ts";
+import { crypto, toHashString } from "std/crypto/mod.ts";
 
 import {
     allocate,
@@ -10,7 +7,7 @@ import {
     hashRaw,
     memory,
     verifyRaw,
-} from './wasm/mod.ts';
+} from "./wasm/mod.ts";
 
 export const version = {
     /**

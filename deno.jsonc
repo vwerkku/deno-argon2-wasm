@@ -2,6 +2,14 @@
     "compilerOptions": {
         "strict": true
     },
+    "imports": {
+        "std/": "https://deno.land/std@0.180.0/"
+    },
+    "tasks": {
+        "build": "deno run --allow-run --allow-read --allow-write scripts/build.ts",
+        "test": "deno test",
+        "lint": "deno lint"
+    },
     "fmt": {
         "files": {
             "include": ["mod.ts", "test.ts", "wasm/"]
@@ -15,7 +23,8 @@
     },
     "lint": {
         "files": {
-            "include": ["mod.ts", "test.ts", "wasm/"]
+            "include": ["mod.ts", "test.ts", "wasm/mod.ts"],
+            "exclude": ["wasm/argon2.ts"]
         },
         "rules": {
             "tags": ["recommended"],

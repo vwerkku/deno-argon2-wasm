@@ -1,7 +1,6 @@
-const __dirname = new URL('./', import.meta.url).pathname;
+import { argon2wasm } from "./argon2.ts";
 
-const wasm = await Deno.readFile(`${__dirname}argon2.wasm`);
-const { instance } = await WebAssembly.instantiate(wasm, {
+const { instance } = await WebAssembly.instantiate(argon2wasm, {
     env: {
         panic: (pointer: number, length: number) => {
             const message = new TextDecoder().decode(
