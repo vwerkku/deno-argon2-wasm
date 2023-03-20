@@ -23,7 +23,7 @@ await Deno.run({
 }).status();
 
 // Convert the wasm into base64.
-const wasm = await Deno.readFile('./wasm/argon2.wasm');
+const wasm = await Deno.readFile("./wasm/argon2.wasm");
 const wasmb64 = base64encode(wasm);
 
 // This is a rather crappy approach but we can't do much
@@ -33,7 +33,6 @@ const output = `
 import { decode as base64decode } from "std/encoding/base64.ts";
 export const argon2wasm = base64decode("${wasmb64}");`;
 
-const encoder = new TextEncoder();
-Deno.writeFile('./wasm/argon2.ts', encoder.encode(output), {
+Deno.writeFile("./wasm/argon2.ts", new TextEncoder().encode(output), {
     create: true
 });

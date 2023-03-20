@@ -184,7 +184,7 @@ export function hash(
 
     // Generate a psuedo random salt
     const salt = toHashString(crypto.subtle.digestSync(
-        'SHA-256',
+        "SHA-256",
         crypto.getRandomValues(new Uint8Array(16)),
     )).slice(0, 16);
 
@@ -195,8 +195,8 @@ export function hash(
     );
 
     // Encode salt and digest as base 64 without padding
-    const saltb64 = base64.encode(salt).replace(/\=/gm, '');
-    const digestb64 = base64.encode(digest).replace(/\=/gm, '');
+    const saltb64 = base64.encode(salt).replace(/\=/gm, "");
+    const digestb64 = base64.encode(digest).replace(/\=/gm, "");
 
     const algo = Object.keys(algorithm).find((key) => {
         return algorithm[key as keyof typeof algorithm] === params.algorithm;
@@ -210,7 +210,7 @@ export function hash(
         p=${params.parallelismCost}
         $${saltb64}
         $${digestb64}
-    `.replace(/(\n|\r|\r\n|\s+)/gm, '');
+    `.replace(/(\n|\r|\r\n|\s+)/gm, "");
 }
 
 /**
